@@ -16,6 +16,7 @@ This project implements an awesome algorithm for doing something very important.
 
 - You'll need to have Rust installed on your system. You can install it from [https://rustup.rs](https://rustup.rs).
 - .....................
+- `~/.aws/credentials` here add your AWS Credentials **or** use vscode AWS TOOLKIT EXTENSION
 
 ### Installing
 
