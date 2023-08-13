@@ -1,8 +1,6 @@
-Here is an example README.md for a Rust project with some key sections and formatting:
+# RUST-STEP_FUNCTION USING AWS LAMBDA
 
-# My Awesome Rust Project
-
-This is an example Rust project to demonstrate a nicely formatted README.
+Building and Deploying Aws Rust Function Made using Rust
 
 ## Overview
 
@@ -16,47 +14,45 @@ This project implements an awesome algorithm for doing something very important.
 
 ### Prerequisites
 
-You'll need to have Rust installed on your system. You can install it from [https://rustup.rs](https://rustup.rs).
+- You'll need to have Rust installed on your system. You can install it from [https://rustup.rs](https://rustup.rs).
+- .....................
 
 ### Installing
 
 Clone the project and build it with Cargo:
 
 ```
-git clone https://github.com/username/rust-project.git
-cd rust-project
-cargo build
+git clone https://github.com/username/rust-step-function.git
+cd rust-step-function
 ```
 
 ### Running
 
 To run the program:
-
+**Deploying Rust-Input Function**
 ```
-cargo run --release
+cd rust-input
+cargo lambda build --release
+cargo lambda deploy rust-input --profile iamusername -r region
 ```
-
-This will build in release mode and execute the binary.
-
-## Usage
-
-The program allows you to do something very useful, like so:
-
+**Deploying Rust-Output Function**
 ```
-awesome-program input.txt output.txt
+cd rust-output
+cargo lambda build --release
+cargo lambda deploy rust-output --profile iamusername -r region
 ```
 
-This reads `input.txt`, performs the awesome algorithm, and writes the output to `output.txt`.
+## Creating Step Function
 
-## Roadmap
+- Go to Step Function
+- Create a new state Machine
+- Choose lambda and name the function input and assign **rust-input** to it
+- Choose another lambda and name the function output and assign **rust-output** to it
 
-There are some exciting features planned for the future:
-
-- Support for parallel processing
-- A HTTP API 
-- Integration with databases
-
-See the [open issues](https://github.com/username/rust-project/issues) for a full list of proposed features.
+# Using Step Function
+- choose New Execution
+- set json as {  "name":"Marco"  } and format json
+- ![step](https://github.com/dewasahu2003/rust-step-function/assets/95997298/d6497869-0530-4213-ac8c-666f07111dc9)
 
 ## Contributing
 
@@ -65,9 +61,3 @@ Contributions are welcome! Please open an issue or submit a pull request.
 ## Author
 
 Dewa Sahu - [Website](https://portfolio-beryl-seven-13.vercel.app/) / [GitHub](https://github.com/dewasahu2003)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-Let me know if you would like me to explain or expand on any part of this example README!
