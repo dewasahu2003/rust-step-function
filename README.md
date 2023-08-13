@@ -15,7 +15,7 @@ This project implements an awesome algorithm for doing something very important.
 ### Prerequisites
 
 - You'll need to have Rust installed on your system. You can install it from [https://rustup.rs](https://rustup.rs).
-- .....................
+- `pip3 install cargo-lambda` install cargo lambda for easily building and deploying your functions.
 - `~/.aws/credentials` here add your AWS Credentials **or** use vscode AWS TOOLKIT EXTENSION
 
 ### Installing
